@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité — Merveillum</title>
+  <meta name="description" content="Politique de confidentialité du jeu de cartes à collectionner Merveillum : données traitées, publicités, consentement et droits des joueurs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0e1411;
+      --ink-soft: #16201b;
+      --outline: #34443a;
+      --parchment: #efe3c8;
+      --paper: #f7f0e1;
+      --text: #2a2017;
+      --text-soft: #5c4b38;
+      --brass: #c9a55a;
+      --brass-dark: #85672a;
+      --brass-light: #ebd49a;
+      --link: #7a5a16;
+      --radius: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #16201b;
+        --parchment: #1f2b24;
+        --text: #f2ebdd;
+        --text-soft: #a7b2a5;
+        --link: #ebd49a;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--ink);
+      background-image:
+        radial-gradient(ellipse at 50% -10%, rgba(201, 165, 90, .22), transparent 60%),
+        radial-gradient(ellipse at 50% 120%, rgba(62, 156, 119, .12), transparent 55%);
+      color: var(--text);
+      font: 17px/1.65 "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 56px 16px 40px;
+      color: #f2ebdd;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--brass-light);
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--brass);
+      transform: rotate(45deg);
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      font-size: clamp(32px, 7vw, 52px);
+      line-height: 1.12;
+      margin: 14px 0 8px;
+    }
+
+    header p {
+      margin: 0;
+      color: #a7b2a5;
+      font-style: italic;
+      font-family: "Playfair Display", Georgia, serif;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto 64px;
+      padding: 0 16px;
+    }
+
+    .sheet {
+      background: var(--paper);
+      border-radius: var(--radius);
+      padding: clamp(22px, 5vw, 48px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+      border: 1px solid rgba(201, 165, 90, .5);
+      position: relative;
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(133, 103, 42, .35);
+      border-radius: calc(var(--radius) - 6px);
+      pointer-events: none;
+    }
+
+    .summary {
+      background: var(--parchment);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      border-left: 4px solid var(--brass);
+    }
+
+    .summary h2 { margin-top: 0; font-size: 22px; }
+
+    .summary ul { margin: 0; padding-left: 20px; }
+
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 1.25;
+      margin: 36px 0 10px;
+      color: var(--text);
+    }
+
+    h2 .num {
+      color: var(--brass-dark);
+      margin-right: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      h2 .num { color: var(--brass); }
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 22px 0 6px;
+    }
+
+    p, li { color: var(--text); }
+
+    li + li { margin-top: 6px; }
+
+    a { color: var(--link); text-underline-offset: 3px; }
+
+    .table-wrap { overflow-x: auto; margin: 14px 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15.5px;
+      min-width: 520px;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(133, 103, 42, .3);
+    }
+
+    th {
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 560px) {
+      table { min-width: 0; }
+      thead { display: none; }
+      tr {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(133, 103, 42, .3);
+      }
+      td {
+        display: block;
+        border: 0;
+        padding: 2px 0;
+      }
+      td::before {
+        content: attr(data-label) " : ";
+        font-weight: 700;
+        color: var(--text-soft);
+      }
+      td:first-child {
+        font-weight: 700;
+        font-size: 16.5px;
+      }
+      td:first-child::before { content: none; }
+    }
+
+    .placeholder {
+      background: rgba(201, 165, 90, .28);
+      border-radius: 4px;
+      padding: 0 4px;
+      font-weight: 600;
+    }
+
+    .muted { color: var(--text-soft); font-size: 15px; }
+
+    footer {
+      text-align: center;
+      color: #a7b2a5;
+      font-size: 14px;
+      padding: 0 16px 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="eyebrow">Merveillum</span>
+    <h1>Politique de confidentialité</h1>
+    <p>Dernière mise à jour : 9 octobre 2026</p>
+  </header>
+
+  <main>
+    <article class="sheet">
+      <section class="summary" aria-labelledby="resume">
+        <h2 id="resume">En bref</h2>
+        <ul>
+          <li>Merveillum se joue <strong>sans créer de compte chez nous</strong> : nous ne demandons ni nom, ni adresse e-mail, ni numéro de téléphone.</li>
+          <li>Ta progression (cartes, pièces, tickets, lauriers…) est enregistrée <strong>sur ton appareil</strong>. Nous n'avons pas de serveur et ne la recevons jamais.</li>
+          <li>Si tu le choisis, tu peux te connecter avec <strong>Google Play Jeux</strong> ou <strong>Game Center</strong> : ta progression est alors aussi sauvegardée dans <strong>ton propre espace</strong> chez Google ou Apple, pour la retrouver sur un autre appareil.</li>
+          <li>Le jeu est financé par des <strong>publicités Google AdMob</strong>. Google peut traiter certaines données techniques de ton appareil pour afficher ces publicités, avec ton consentement lorsque la loi l'exige.</li>
+          <li>Il n'y a <strong>aucun achat intégré</strong> et aucune donnée n'est vendue.</li>
+        </ul>
+      </section>
+
+      <h2><span class="num">1.</span>Qui sommes-nous ?</h2>
+      <p>
+        L'application Merveillum (ci-après « l'application ») est éditée par
+        <span class="placeholder">[Nom de l'éditeur ou de la société]</span>,
+        <span class="placeholder">[adresse postale]</span>, responsable du traitement
+        des données décrites ici.
+      </p>
+      <p>
+        Pour toute question sur cette politique ou sur tes données :
+        <span class="placeholder">[adresse e-mail de contact]</span>.
+      </p>
+
+      <h2><span class="num">2.</span>Les données enregistrées sur ton appareil</h2>
+      <p>
+        Pour que tu retrouves ta partie, l'application enregistre localement, dans
+        la mémoire de ton téléphone ou de ta tablette :
+      </p>
+      <ul>
+        <li>ta collection de cartes et le nombre d'exemplaires ;</li>
+        <li>tes pièces, tickets, lauriers, ta ligue et tes statistiques de duel ;</li>
+        <li>ta série de connexion, tes missions du jour et l'heure de ta dernière pochette gratuite ;</li>
+        <li>le nombre de publicités regardées dans la journée (pour appliquer la limite quotidienne).</li>
+      </ul>
+      <p>
+        Ces informations ne te concernent qu'en tant que joueur, ne permettent pas
+        de t'identifier et <strong>ne quittent pas ton appareil</strong>, sauf si
+        tu actives la sauvegarde dans ton compte de jeu (voir ci-dessous) : nous
+        ne les collectons jamais. Elles sont supprimées si tu désinstalles l'application
+        ou si tu effaces ses données dans les réglages de ton appareil.
+      </p>
+
+      <h2><span class="num">3.</span>Compte de jeu et sauvegarde dans le cloud (facultatif)</h2>
+      <p>
+        Pour ne pas perdre ta collection, tu peux te connecter depuis le Cabinet
+        avec le service de jeu de ton appareil :
+      </p>
+      <ul>
+        <li><strong>Android :</strong> Google Play Jeux, service fourni par Google ;</li>
+        <li><strong>iPhone / iPad :</strong> Game Center, service fourni par Apple, la sauvegarde étant conservée dans ton iCloud.</li>
+      </ul>
+      <p>
+        Une fois connecté, l'application reçoit de ce service ton <strong>pseudo de
+        joueur</strong> (affiché dans le Cabinet) et y enregistre une
+        <strong>sauvegarde de ta progression</strong> : les mêmes informations que
+        celles listées ci-dessus, avec la date de la sauvegarde. Elle est
+        actualisée automatiquement pendant que tu joues.
+      </p>
+      <p>
+        Cette sauvegarde est stockée <strong>dans ton compte Google ou Apple</strong>,
+        pas chez nous : nous n'y avons pas accès et ne gérons aucun serveur.
+        Google et Apple la traitent selon leurs propres règles
+        (<a href="https://policies.google.com/privacy?hl=fr" rel="noopener">Google</a>,
+        <a href="https://www.apple.com/fr/legal/privacy/fr-ww/" rel="noopener">Apple</a>).
+        La connexion est facultative : sans elle, le jeu fonctionne de la même
+        façon, ta progression restant seulement sur ton appareil.
+      </p>
+
+      <h2><span class="num">4.</span>Les publicités (Google AdMob)</h2>
+      <p>L'application affiche deux types de publicités, fournies par Google AdMob :</p>
+      <ul>
+        <li><strong>les publicités avec récompense</strong>, que tu choisis de regarder pour gagner un ticket ;</li>
+        <li><strong>une publicité plein écran à la fin de chaque duel</strong>.</li>
+      </ul>
+      <p>
+        Pour afficher ces publicités, en mesurer l'efficacité et lutter contre la
+        fraude, le SDK Google Mobile Ads intégré à l'application peut collecter et
+        transmettre à Google les données suivantes :
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Données</th><th>Exemples</th><th>Finalité</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Données">Identifiants de l'appareil</td>
+              <td data-label="Exemples">identifiant publicitaire Android, identifiant pour les annonceurs (IDFA) sur iOS si tu l'autorises, identifiant propre à l'application</td>
+              <td data-label="Finalité">publicité, mesure, prévention de la fraude</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Données techniques</td>
+              <td data-label="Exemples">modèle et système de l'appareil, langue, adresse IP, réseau</td>
+              <td data-label="Finalité">affichage et sécurité des publicités</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Localisation approximative</td>
+              <td data-label="Exemples">pays ou région déduits de l'adresse IP</td>
+              <td data-label="Finalité">choix de publicités adaptées à ta région</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Interactions avec les publicités</td>
+              <td data-label="Exemples">publicités vues, cliquées, regardées jusqu'au bout</td>
+              <td data-label="Finalité">récompense, mesure, statistiques</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Diagnostics</td>
+              <td data-label="Exemples">journaux d'erreurs du SDK publicitaire</td>
+              <td data-label="Finalité">bon fonctionnement des publicités</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Google agit comme responsable de traitement indépendant pour ces données.
+        Pour en savoir plus :
+        <a href="https://policies.google.com/privacy?hl=fr" rel="noopener">Règles de confidentialité de Google</a> et
+        <a href="https://policies.google.com/technologies/partner-sites?hl=fr" rel="noopener">utilisation des données par Google dans les applications partenaires</a>.
+      </p>
+
+      <h3>Ton consentement</h3>
+      <p>
+        Si tu te trouves dans l'Espace économique européen, au Royaume-Uni ou en
+        Suisse, l'application te demande ton consentement au premier lancement, au
+        moyen de l'outil de consentement de Google (« UMP »). Tu peux accepter ou
+        refuser les publicités personnalisées. Si tu refuses, des publicités non
+        personnalisées, basées uniquement sur le contexte, peuvent tout de même
+        être affichées.
+      </p>
+      <p>
+        Sur iPhone et iPad, l'application ne te demande pas l'autorisation de
+        suivi (« App Tracking Transparency ») : l'identifiant publicitaire de ton
+        appareil n'est donc pas utilisé.
+      </p>
+
+      <h3>Désactiver la personnalisation</h3>
+      <ul>
+        <li><strong>Android :</strong> Paramètres › Google › Annonces › Supprimer l'identifiant publicitaire (ou Désactiver la personnalisation des annonces).</li>
+        <li><strong>iPhone / iPad :</strong> Réglages › Confidentialité et sécurité › Suivi.</li>
+      </ul>
+      <p>
+        Regarder les publicités avec récompense reste toujours facultatif : tu peux
+        jouer sans jamais en regarder.
+      </p>
+
+      <h2><span class="num">5.</span>Bases légales</h2>
+      <ul>
+        <li><strong>Exécution du service</strong> : enregistrement local de ta progression pour faire fonctionner le jeu, et sauvegarde dans ton compte de jeu lorsque tu choisis de te connecter.</li>
+        <li><strong>Consentement</strong> : publicités personnalisées et accès aux informations de ton appareil, lorsque la loi l'exige (Union européenne, Royaume-Uni, Suisse).</li>
+        <li><strong>Intérêt légitime</strong> : publicités non personnalisées qui financent le jeu gratuit, sécurité et prévention de la fraude publicitaire.</li>
+      </ul>
+
+      <h2><span class="num">6.</span>Partage des données</h2>
+      <p>
+        Nous ne vendons, ne louons et ne partageons aucune donnée personnelle. Les
+        seules données qui sortent de ton appareil sont la sauvegarde envoyée dans
+        ton propre compte de jeu si tu te connectes (Google Play Jeux ou Game
+        Center), et celles collectées directement par le SDK de Google AdMob
+        décrit ci-dessus, éventuellement
+        transférées par Google hors de l'Union européenne dans le cadre des
+        garanties prévues par sa politique (clauses contractuelles types, cadre de
+        protection des données UE–États-Unis).
+      </p>
+
+      <h2><span class="num">7.</span>Durée de conservation</h2>
+      <ul>
+        <li><strong>Progression du jeu :</strong> sur ton appareil, jusqu'à la désinstallation de l'application ou l'effacement de ses données.</li>
+        <li><strong>Sauvegarde dans le cloud :</strong> dans ton compte Google Play Jeux ou iCloud, jusqu'à ce que tu la supprimes (Google Play Jeux › Paramètres › Supprimer les données de jeu, ou Réglages › [ton nom] › iCloud › Gérer le stockage).</li>
+        <li><strong>Données publicitaires :</strong> conservées par Google selon ses propres règles (consultables sur <a href="https://policies.google.com/technologies/retention?hl=fr" rel="noopener">cette page</a>).</li>
+      </ul>
+
+      <h2><span class="num">8.</span>Enfants</h2>
+      <p>
+        Merveillum s'adresse à un public général et n'est pas spécifiquement destiné
+        aux enfants de moins de 13 ans. Nous ne collectons sciemment aucune donnée
+        personnelle concernant des enfants. Si tu es parent et penses que ton
+        enfant nous a transmis des informations, contacte-nous à
+        <span class="placeholder">[adresse e-mail de contact]</span>.
+      </p>
+
+      <h2><span class="num">9.</span>Sécurité</h2>
+      <p>
+        L'application ne demande aucun mot de passe : la connexion se fait
+        directement auprès de Google ou d'Apple, qui ne nous transmettent jamais
+        tes identifiants. Les données de jeu ne sont envoyées que dans ton propre
+        compte de jeu, et tous les échanges (sauvegarde, publicités) sont
+        chiffrés (HTTPS).
+      </p>
+
+      <h2><span class="num">10.</span>Tes droits</h2>
+      <p>
+        Conformément au Règlement général sur la protection des données (RGPD) et à
+        la loi Informatique et Libertés, tu disposes d'un droit d'accès, de
+        rectification, d'effacement, d'opposition, de limitation et de portabilité,
+        ainsi que du droit de retirer ton consentement à tout moment.
+      </p>
+      <ul>
+        <li><strong>Données de jeu :</strong> elles sont sur ton appareil ; tu peux les effacer en supprimant les données de l'application ou en la désinstallant. Si tu t'es connecté, la sauvegarde dans le cloud se supprime depuis ton compte Google Play Jeux ou iCloud (voir « Durée de conservation »).</li>
+        <li><strong>Consentement publicitaire :</strong> tu peux modifier ton choix en effaçant les données de l'application (le formulaire s'affichera de nouveau) et via les réglages publicitaires de ton appareil.</li>
+        <li><strong>Données traitées par Google :</strong> tu peux exercer tes droits auprès de Google via <a href="https://myaccount.google.com/data-and-privacy?hl=fr" rel="noopener">ton compte Google</a> ou ses formulaires dédiés.</li>
+      </ul>
+      <p>
+        Pour toute demande, écris-nous à
+        <span class="placeholder">[adresse e-mail de contact]</span>. Tu peux aussi
+        introduire une réclamation auprès de la
+        <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">CNIL</a>.
+      </p>
+
+      <h2><span class="num">11.</span>Images et crédits</h2>
+      <p>
+        Les illustrations des cartes sont libres de droits (domaine public, CC0,
+        CC BY, CC BY-SA). Elles sont incluses dans l'application : aucune image
+        n'est téléchargée pendant le jeu. Leurs auteurs et licences sont crédités
+        dans l'application (Collection › ⓘ).
+      </p>
+
+      <h2><span class="num">12.</span>Modifications</h2>
+      <p>
+        Nous pouvons mettre à jour cette politique, par exemple si l'application
+        évolue. La date de dernière mise à jour figure en haut de cette page. En cas
+        de changement important, nous t'en informerons dans l'application.
+      </p>
+
+      <p class="muted">
+        Les mentions surlignées sont à compléter par l'éditeur avant la
+        publication de l'application.
+      </p>
+    </article>
+  </main>
+
+  <footer>Merveillum — jeu de cartes à collectionner · Nature, sciences, histoire</footer>
+</body>
+</html>
